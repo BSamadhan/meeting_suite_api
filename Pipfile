@@ -1,0 +1,27 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+fastapi = "*"
+uvicorn = {extras = ["standard"], version = "*"}
+psycopg2-binary = "*"
+alembic = "*"
+pydantic = "*"
+python-multipart = "*"
+sqlalchemy = "*"
+passlib = "*"
+email-validator = "*"
+bcrypt = "==4.0.1"
+python-jose = {extras = ["cryptography"], version = "*"}
+pydantic-settings = "*"
+faster-whisper = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.13"
+
+[scripts]
+start = "uvicorn app.main:app --reload"
